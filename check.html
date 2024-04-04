@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://js.stripe.com/v3/elements.js"></script>
+</head>
+<body>
+  <input type="text" id="card-number-input" placeholder="Enter card number" />
+  <div id="card-element"></div>
+  <button id="pay-button">Pay</button>
+
+  <script>
+    const cardTypeRegex = {
+      visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
+      mastercard: /^(?:5[1-5][0-9]{14})$/,
+      verve: /^(?:506(0|1|2|3|4|5|6|7|8|9)|6500)[0-9]{12}(?:[0-9]{3})?$/,
+    };
+
+    const stripe = Stripe('pk_test_51NSJNEGD6oiTGucl7QjsblGOEfVuib8ZWxm0njqFAjkR7Oqt4uIedWB34lh5BkZNZ0HFxOXVa5UuvuzldHngawKZ00XqJjHWBA');
+    const elements = stripe.elements();
+    const cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    const payButton = document.getElementById('pay-button');
+
+    cardElement.on('change', function(event) {
+      const cardNumber = event.target.value;
+      let cardType = '';
+
+      if (cardTypeRegex.visa.test(cardNumber)) {
+        cardType = 'Visa';
+      } else if (cardTypeRegex.mastercard.test(cardNumber)) {
+        cardType = 'Mastercard';
+      } else if (cardTypeRegex.verve.test(cardNumber)) {
+        cardType = 'Verve';
+      }
+
+      console.log(`Card type detected: ${cardType}`);
+    });
+
+    payButton.addEventListener('click', function() {
+      const cardNumberInput = document.getElementById('card-number-input');
+      stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+      }).then(function(result) {
+        if (result.error) {
+          console.error(result.error.message);
+        } else {
+          const paymentMethodId = result.paymentMethod.id;
+          console.log('Payment method ID:', paymentMethodId);
+          // Call your server endpoint to complete the payment using the paymentMethodId
+          // You'll need to implement this server-side logic using the Stripe API
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cdn/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./cdn/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Javascript Form Validation</title>
+</head>
+<body>
+    <div class="container bg-success align-items-center">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <label for="">Enter first Number</label> 
+                <input type="number" class="form-control" id="first_num">
+            </div>
+            <br>
+            <div class="col-md-6 mt-3">
+                <label for="">Select Operator</label>
+                <select name="" id="operator" class="class-form">
+                <option value="" hidden selected disabled></option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+            </div>
+            <br>
+            <div class="col-md-6 mt-3">
+                <label for="">Enter Second Number</label>
+                <input type="number" class="form-control" id="second_num">
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-danger mt-3" onclick="solve()">Calculator</button>
+        </div>
+        <br>
+        <div class="col-md-6 mt-2">
+            <b><div id="answer"></div></b>
+        </div>
+    </div>
+    <script src="./validation.js"></script>
+    <script src="./cdn/bootstrap/js/popper.min.js"></script>
+    <script src="./cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

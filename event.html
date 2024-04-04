@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-6 mb-2">
+                <label for="">DOB</label>
+                <input type="text" name="" class="form-control" id="userdob">
+            </div>
+            <div class="col-md-6 mb-2">
+                <label for="">Current Year</label>
+                <!-- <input type="text" name="" class="form-control" id="currentyear"> -->
+                <input type="text" name="" onkeypress="Firefighter()" class="form-control" id="currentyear">
+            </div>
+            <div class="col-md-6 mb-2">
+                <label for="">Current Year</label>
+                <select onchange="alert('You have changed the selection!');" class="form-control">
+                    <option>Select</option>
+                    <option>2003</option>
+                    <option>2008</option>
+                </select>
+                
+            </div>
+            <div class="col-md-6 mb-2">
+                <button onclick="funcla();" class="btn btn-success"> click me</button>
+            </div>
+            <div class="col-md-6 mb-2">
+                <h3 class="text-success" id="result"></h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function highlightInput(elm){
+            elm.style.background = "yellow";
+        }    
+        var name  = 'my food\'s dishkkkkkkkkkkkkkkkkkkkkkffffffffffffff';
+        console.log(name.length)
+        var str = "Color red looks brighter than color blue.";
+        var result = str.toLocaleLowerCase();
+        document.write(result)
+
+        var x = -5 / 0;
+console.log(x); 
+
+
+    </script>
+    <!-- <input type="text" onfocus="highlightInput(this)" id="Firefighter">
+    <button type="button">Button</button> -->
+
+    <input type="text" onblur="alert('Text input loses focus!')">
+<button type="button">Submit</button>
+
+    <!-- <button type="button" onmouseover="Firefighter()">Right Click on Me</button> -->
+    <a href="./class.html">Right Click on Me</a>
+    
+    <script src="./event.js"></script>
+    <!-- <script src="./cdn/jquery.min.js"></script>
+<script src="./cdn/bootstrap.min.js"></script> -->
+</body>
+</html>
+

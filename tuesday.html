@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log('hello world')
+        // console.log('Dave Daniel')
+
+
+        // //  Variables (Var, const, let)
+        //  let   name = 'peter pan'
+        //     console.log(name)
+
+        //   let  sentence = 'how are you today, nice to see you,hope you have a great day!'
+
+        // operator
+        // banana = prompt('what is your favorite fruit')
+        // console.log(fruit)
+
+
+        // food =Number(prompt('How much was the food?'))
+        // tipPercentage =Number(prompt('tip %')) / 100
+        // tipAmount = food *  tipPercentage
+        // total = food + tipAmount
+
+        // console.log('tip amount', tipAmount)
+        // console.log('total', total)
+        // alert(tipAmount)
+        // alert(total)
+
+
+        // user input
+        // data types (strings, numbers)
+        /*
+        Number = 1, 5, 10, 100, 2.5
+        strings = hello, "what is up"
+        arrays = []
+        object = {}
+        boolean = true / false
+        */
+
+        /* Math operators
+        Multiple *
+        Divide /
+        Exponents **
+        Modulo/Reminder % 5%2 = 1
+        Add +
+        Subtract -
+        */
+
+        /* Math method
+        Floor - Rounds down
+        Cell - Rounds up
+        Random - Gives you number between 0 and 1
+        */
+
+        // Baby weather app (conditionals)
+        // if (rain) = 'Grab your umbrella'
+        // else = 'Wear your sunglasses'
+        // let weather = prompt('How is the weather?')
+        // if (weather == 'rainy'){
+        //     console.log('Grab your umbrella')
+        // } else {
+        //     console.log('Wear your sunglasses ')
+        // }
+
+        // conditional operators
+        // ==, ===, >, <, <=, >=, !=, !==
+
+        //  functions
+        // this is a function called 'sayMyName'
+        // and it has 0 arguments
+        // it logs out your name to the console
+        function sayMyName(){
+            console.log('Dave')
+            
+        }
+
+        // sayMyName()
+        // this is a function called 'sayMyName2'
+        // and it has 1 argument called 'name'
+        // it logs out your name to the console
+        function sayMyName2(name){
+            console.log(name)
+        } 
+        // sayMyName2('Matts')
+
+        function greeting(name){
+            // greet = 'hi ' + name + ', Nice to meet you!'
+        // template literals``
+            greet = `hi $  {name}, Nice to meet you!`
+            console.log(greet)
+        }
+
+        // greeting('John')
+
+        function sum(a, b){
+            // return
+            return a + b       
+         }
+        //  num1 = sum(1,2)
+        //  console.log(num1)
+
+    //     function calculateFoodTotal(food, tip) {
+    //    const tipPercentage = tip / 100
+    //    const tipAmount = food *  tipPercentage
+    //    const total = sum(food,tipAmount)
+    //     return  total
+    //     }
+      
+    
+    // console.log(calculateFoodTotal(230, 20))
+
+    // ES6 syntax
+    // Arrow functions =>
+       const sumArrow = (a, b) => {
+        return a + b
+       }
+
+    //    arrow function with implicit return
+    // IMPORTANT ; For implicit return, remove squigglies
+       const sumArrow2 = (a, b) => a + b
+       
+    //    console.log(sumArrow2(10, 50))
+
+    // Arrays 
+    // const groceries = ['🍌', 'gray', '🍊', '🥭']
+    // console.log(groceries)
+
+    // grab the 2nd index
+    // console.log(groceries[2])
+
+    // Array method
+    // groceries.push('cookies')
+    // console.log(groceries)
+
+    // groceries.push('Ballon')
+    // console.log(groceries)
+
+    // Array Slice
+    // start from 0 INCLUSIVE and Up to 2 [0, 1]
+    //    console.log(groceries.slice(3, 6))
+    //    console.log(groceries.slice(1, 4))
+    //    Array methods (slice, push, index0f, length)
+    // console.log(groceries.indexOf('gray'))
+    // console.log(groceries.length)
+
+    // OBJECT {}
+    const person = {
+        name: 'Leonardo',
+        shirt: 'white'
+     }
+    //  access object: dot notation vs. bracket notation
+    //  console.log(person.name)
+    //  console.log(person.shirt)
+
+    //  bracket notation
+    // console.log(person['name'])
+    // console.log(person['shirt'])
+
+    // assign object
+    person.phone = '234-677-457-8732'
+    // console.log(person.phone)
+
+    // console.log(person)
+
+    // OBJECT EXERCISE PERSON2
+    const person2 = {
+        name: 'Dave',
+        shirt: 'Jss1',
+        subject: 'English',
+        Tel: '1-238-273-3843'
+    }
+    // console.log(person2)
+
+
+    // ES6 arrow function (2 arguments)
+    // object
+    // template literals
+    // methods Car.start()
+    const introducer = (name, shirt) => {
+        const person = {
+            name: name,
+            shirt: shirt,
+            assets: 100000,
+            liability: 50000,
+            netWorth: function () {
+                return this.assets - this.liability
+            }
+        }
+       const intro = `Hi, my name is ${person.name} having 
+     ${person.shirt} and my net worth is $${person.netWorth()}
+     USD`
+
+     return intro
+    }
+    // console.log(introducer('Dave', 'Blue'))
+
+
+    // Loops
+    const fruits = ['🍌', 'gray', '🍊',
+     '🥭', '🍌', 'gray', '🍊', '🥭',
+      '🍌', 'gray', '🍊', '🥭', '🍌',
+       'gray', '🍊', '🥭']
+
+    // for (let i=0; i < fruits.length; i++) {
+    //     console.log(fruits[i]);
+    // } 
+
+    //   for (const fruit of fruits){
+    //     console.log(fruit)
+    //   }
+        const double = (numbers) => {
+            let result = []
+            for (const number of numbers){
+            result.push(number ** 2)
+        } 
+        return result
+        }
+        // console.log(double([1,2,3,4,5,6,7]))
+       
+
+    //   const numbers = [1,2,3,4,5,6,]
+    //     for (const number of numbers){
+    //         result.push(number * 2)
+    //     }
+
+    //     console.log(result)
+
+    // Function letter count
+    const howManyLetters = (phrase) => {
+       
+        // counter
+        let result = 0;
+
+        for (index in phrase){
+            console.log(Number (index) +1)
+            result = Number(index) + 1
+        }
+
+        return { result }
+    }
+
+    // const phrase = prompt('write your phrase')
+    // console.log(howManyLetters(phrase))
+
+    const letterFrequency = (phrase) => {
+        'haha'
+        // console.log(phrase)
+        // make a 'frequency' object {}
+        let frequency = {}
+        for (const letter of phrase) {
+            // check if letter exist in frequency
+          if  (letter in frequency) {
+              // increment the value by +1
+              frequency[letter] ++
+        } else {
+            frequency[letter] = 1
+        }
+        }
+        return frequency
+    }
+
+    // console.log(letterFrequency('lol, what are you doing later tonight lol, haha!'))
+
+
+        // word frequency
+        const wordFrequency = (phrase) => {
+         const words = phrase.split('')
+            letterFrequency(words)  
+        }
+        // const userInput = prompt('write your sentence')
+        // console.log(wordFrequency(userInput))
+    // incremental operators
+    // ++, --, +=
+
+    //  higher order functions
+    //  map - loops and return arrays
+    //  filter- loops and returns an array with matching conditions
+    //  reduce
+
+
+        // map
+     const doubleMap = (numbers) => {
+        return numbers.map(number => number *2)
+     }
+    
+    //  console.log(doubleMap([1,2,3]))
+
+    //  Filter(  [1,2,3,4,5,6]  )
+    const filter = (numbers, greaterThan) => {
+      let result = []
+      for (const number of numbers) {
+        if (number > greaterThan) {
+            result.push(number)
+        }
+      }
+      return result
+    }
+    // console.log(filter([1,2,3,4,5,6], 2))
+    // const nums = [1,2,3,4,5,6]
+    // console.log(nums.filter(num => num >= 2))
+
+    const actors = [
+        {name: 'johnny', netWorth: 2000000},
+        {name: 'amber', netWorth: 10},
+        {name: 'matt', netWorth: 170000000},
+        {name: 'brad', netWorth: 300000000},
+        {name: 'leonardo', netWorth: 10000000}, 
+    ]
+    
+    // playground.innerHTML = `<h1>${names}</h1>`
+    
+    // console.log(actors.reduce((a, b) => a + b.netWorth, 0))
+    // reduce
+    //  sum all of the net worths
+    //  SUM: Think reduce
+    // reduce takes in a function as an argument 
+    // reduce loops and give you back the accumulator
+
+//     const nums = [1,2,3]
+//    const result = nums.reduce(sum)
+//    console.log(result)
+
+    function multiply(a, b) {
+        //  return
+        return a*b
+    }
+//    const num1 = [1,2,3,4]
+//    const result = num1.reduce(multiply)
+//    console.log(result)
+
+
+
+    // contextmenu event
+    <button type="button" oncontextmenu="alert('You have right-clicked a button!');">Right Click on Me</button>
+// <a href="#" oncontextmenu="alert('You have right-clicked a link!');">Right Click on Me</a>
+
+        
+
+    // loop
+     text += cars[0] + "<br>";
+    text += cars[1] + "<br>";
+    text += cars[2] + "<br>";
+    text += cars[3] + "<br>";
+    text += cars[4] + "<br>";
+    text += cars[5] + "<br>";
+
+    for (let i = 0; i < cars.length; i++) {
+        text  += car [i] + "<br>";
+    }
+    </script>
+
+</body>
+</html> 

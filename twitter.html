@@ -1,0 +1,88 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cdn/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./cdn/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Data</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <div class="card" style="background-color: rgba(0, 0, 29, 0.952); 
+                width:950px; padding:18px;">
+                    <img src="./img.png/1103648 - Copy.jpg" alt="">
+                <div class="card-img-overlay">
+                    <div class="card-header">
+                        <h3 class="text-center text-primary">INFORMATION</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" id="myForm">
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                            <p class="text-white">PERSONAL DATA:</p>
+                            <ul>
+                                <li class="mt-2 text-white">FULL-NAME</li>
+                                <li class="mt-2 text-white">DATE-OF-BIRTH</li>
+                                <li class="mt-2 text-white">STATE-OF-ORIGIN</li>
+                                <li class="mt-2 text-white">PLACE-OF-BIRTH</li>
+                                <li class="mt-2 text-white">AGE</li>
+                                <li class="mt-2 text-white">OCCUPATON</li>
+                                <li class="mt-2 text-white">NATIONALITY</li>
+                                <li class="mt-2 text-white">TELL/PHONE-NUMBER</li>
+                                <li class="mt-2 text-white">EMAIL</li>
+                            </ul>
+                        </div>
+                        <script>
+                            
+                            updateOutputDiv();
+                            function updateOutputDiv(){
+                                 //Retrieve data from LocalStorage
+                                 const Full_name = localStorage.getItem("Full_name")
+                                 const Birth = localStorage.getItem("Birth");
+                                 const Origin = localStorage.getItem("Origin");
+                                 const Place = localStorage.getItem("Place");
+                                 const Age = localStorage.getItem("Age");
+                                 const Occupation = localStorage.getItem("Occupation");
+                                 const Nationality = localStorage.getItem("Nationality");
+                                 const Tell = localStorage.getItem("Tell");
+                                 const Email = localStorage.getItem("Email");
+                             
+                         // Update the output div with the stored data
+                         document.write(`
+                         <div class="col-md-6">
+                            <p style="margin-left: 50px" class="text-white">FILL UP HERE</p>
+                            <ul style="list-style-type: none;">
+                                <li><input type="text" name="Full_name"id="Full_name" class="text-center" value="${Full_name}">
+                                </li>
+                                <li><input type="text" name="Birth"id="Birth" class="mt-1 text-center" value="${Birth}"></li>
+                                <li><input type="text" name="Origin"id="Origin" class="mt-1 text-center" value="${Origin}"></li>
+                                <li><input type="text" name="Place"id="Place" class="mt-1 text-center" value="${Place}"></li>
+                                <li><input type="text" name="Age"id="Age" class="mt-1 text-center" value="${Age}"></li>
+                                <li><input type="text" name="Occupation"id="Occupation" class="mt-1 text-center" value="${Occupation}"></li>
+                                <li><input type="text" name="Nationality"id="Nationality" class="mt-1 text-center" value="${Nationality}"></li>
+                                <li><input type="text" name="Tell"id="Tell" class="mt-1 text-center" value="${Tell}"></li>
+                                <li><input type="text" name="Email"id="Email" class="mt-1 text-center" value="${Email}"></li>
+                            </ul>
+                        </div>
+                         `)
+                            }
+                        </script> 
+                        <a href="./twitterII.html" class="btn btn-outline-primary">Confirm</a>
+                        </form>
+                    </div>
+                </div>
+                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./twitter.js""></script>
+    <script src="./cdn/bootstrap/js/popper.min.js"></script>
+    <script src="./cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

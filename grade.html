@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cdn/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./cdn/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Data</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <div class="card" style="background-color: lightblue;">
+                    <div class="card-body">
+                        <form action="" id="myForm">
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                            <p>Subject(s) Passed:</p>
+                            <ul> David302000
+                                <li class="mt-2">English Language</li>
+                                <li class="mt-2">Mathematics</li>
+                                <li class="mt-2">Biology</li>
+                                <li class="mt-2">Chemistry</li>
+                                <li class="mt-2">Physics</li>
+                                <li class="mt-2">Geography</li>
+                                <li class="mt-2">Economics</li>
+                                <li class="mt-2">Civic Education</li>
+                                <!-- Add other subjects here -->
+                            </ul>
+                        </div>  
+                        
+                            <div class="col-md-4">
+                                <p style="margin-left: 50px">Mark (s) Obtained:</p>
+                                <ul style="list-style-type: none;">
+                                    <li><input type="text" name="english" id="english" class="text-center" onkeydown="cal_1();" required>
+                                    </li>
+                                    <li><input type="text" name="maths" id="maths" class="mt-1 text-center" onkeydown="cal_2()" required></li>
+                                    <li><input type="text" name="Biology" id="Biology" class="mt-1 text-center" onkeydown="cal_3()" required></li>
+                                    <li><input type="text" name="Chem" id="Chem" class="mt-1 text-center" onkeydown="cal_4()" required></li>
+                                    <li><input type="text" name="phys" id="phys" class="mt-1 text-center" onkeydown="cal_5()" required></li>
+                                    <li><input type="text" name="Geo" id="Geo" class="mt-1 text-center" onkeydown="cal_6()" required></li>
+                                    <li><input type="text" name="Econ" id="Econ" class="mt-1 text-center" onkeydown="cal_7()" required></li>
+                                    <li><input type="text" name="civic" id="civic" class="mt-1 text-center" onkeydown="cal_8()" required></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <p style="margin-left: 70px;">Grade Scored</p>
+                                <ul style="list-style-type: none;">
+                                    <li><input type="text" name="first" id="first" class=" text-center" required></li>
+                                    <li><input type="text" name="second"" id="second" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="Third" id="Third" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="Forth" id="Forth" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="Fifth" id="Fifth" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="Sixth" id="Sixth" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="Seventh" id="Seventh" class="mt-1 text-center" required></li>
+                                    <li><input type="text" name="eighth" id="eighth" class="mt-1 text-center" required></li>
+                                </ul>
+                            </div>
+             <button type="submit">submit</button>
+             
+                        </form>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./grade.js"></script>
+    <script src="waec.js"></script>
+    <script src="./cdn/bootstrap/js/popper.min.js"></script>
+    <script src="./cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

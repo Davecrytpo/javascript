@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cdn/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./cdn/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Javascript Simple Calculator</title>
+</head>
+<body>
+    <div class="container bg-secondary">
+            <label for="">Enter first Number</label>
+                <input type="number" class="form-control mt-3" id="first_num" required>
+            <br>
+            <label for="">Select Operator</label>
+            <select name="" id="operator" class="mt-3 form-control" >
+                <option value="" hidden selected disabled>Select Operator</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+            <br>
+            <label for="">Enter Second Number</label>
+            <input type="number" id="second_num" class="form-control mt-3">
+            <br><br>
+            <button type="button" class="btn btn-primary mt-3" onclick="calc()">Calculate</button>
+            <br>
+            <b><div id="answer"></div></b>
+    </div>
+    <script>
+        function calc() {
+            var first_num = parseInt(document.getElementById("first_num").value);
+            var operator = document.getElementById("operator").value;
+            var second_num = parseInt(document.getElementById("second_num").value);
+            var total;
+            if(operator == "+"){
+                total = first_num + second_num;
+            }
+            if(operator == "-"){
+                total = first_num - second_num;
+            }
+            
+            if(operator == "*"){
+                total = first_num * second_num;
+            }
+            
+            if(operator == "/"){
+                total = first_num / second_num;
+            }
+            document.getElementById("answer").innerHTML = total
+        }
+    </script>
+
+    <br>
+    <br>
+    <h2>ATM simulator javascript</h2>
+    <label for="bank_balance">Bank Balance:</label>
+    <input type="number" id="bank_balance" value="8000" readonly>
+    <br>
+    <label for="withdraw">Withdraw:</label>
+    <input type="number" class="form-control" id="withdraw">
+    <br>
+    <button type="button" class="btn btn-danger" onclick="atm()">Enter</button>
+    <br>
+
+    <script>
+        function atm() {
+            var bank_balance = parseInt(document.getElementById("bank_balance").value);
+            var withdraw = parseInt(document.getElementById("withdraw").value);
+            
+            if(withdraw > bank_balance){
+                alert("insufficient funds. Your current balance #" + bank_balance);
+            } else {
+                new_balance = bank_balance - withdraw;
+                document.getElementById("bank_balance").value = new_balance;
+                document.getElementById("withdraw").value = "";
+                alert("You have successfully withdrawn " + withdraw + " Your new balance is " + new_balance)
+            }
+        }
+    </script>
+</body>
+</html>

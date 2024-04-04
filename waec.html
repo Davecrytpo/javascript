@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEAC Certificate</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+          <div class="card" style="background-color: lightgoldenrodyellow">
+            <div class="card-header text-center">
+              <img src="./img.png/weac logo.PNG" alt="" />
+              <h5>WEST AFRICAN EXAMINATIONS COUNCIL</h5>
+              <h4>SECONDARY SCHOOL CERTIFICATE</h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <p><strong>Name:</strong> John Rolex</p>
+                  <p><strong>Examination Number:</strong> 1234567890</p>
+                  <p><strong>Date of Birth:</strong> 01-Jan-2003</p>
+                </div>
+                <div class="col-md-6">
+                  <!-- Add your certificate image here -->
+                  <img
+                    src="path_to_certificate_image.jpg"
+                    alt="WEAC Certificate"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <p>
+                    This is to certify that John Rolex has successfully
+                    completed the West African Secondary School Certificate
+                    Examination in the year 2023 and has met the requirements
+                    for the award of the certificate.
+                  </p>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-4">
+                  <p style="margin-left: 30px">Subject(s) Passed:</p>
+                  <ul>
+                    <li class="mt-2">English Language</li>
+                    <li class="mt-2">Mathematics</li>
+                    <li class="mt-2">Biology</li>
+                    <li class="mt-2">Chemistry</li>
+                    <li class="mt-2">Physics</li>
+                    <li class="mt-2">Geography</li>
+                    <li class="mt-2">Economics</li>
+                    <li class="mt-2">Civic Education</li>
+                    <!-- Add other subjects here -->
+                  </ul>
+                </div>
+                <script>
+                  updateOutputDiv();
+                  function updateOutputDiv() {
+                    // Retrieve data from LocalStorage
+                    const english = localStorage.getItem("english");
+                    const maths = localStorage.getItem("maths");
+                    const Biology = localStorage.getItem("Biology");
+                    const Chem = localStorage.getItem("Chem");
+                    const phys = localStorage.getItem("phys");
+                    const Geo = localStorage.getItem("Geo");
+                    const Econ = localStorage.getItem("Econ");
+                    const civic = localStorage.getItem("civic");
+                    const first = localStorage.getItem("first");
+                    const second = localStorage.getItem("second");
+                    const Third = localStorage.getItem("Third");
+                    const Forth = localStorage.getItem("Forth");
+                    const Fifth = localStorage.getItem("Fifth");
+                    const Sixth = localStorage.getItem("Sixth");
+                    const Seventh = localStorage.getItem("Seventh");
+                    const eighth = localStorage.getItem("eighth");
+
+                    // Update the output div with the stored data
+                    document.write(`
+                                      <div class="col-md-4">
+                                        <p style="margin-left: 50px">Mark (s) Obtained:</p>
+                                        <ul style="list-style-type: none">
+                                    <li><input type="text" class="mt-1 text-center" value="${english}"value /></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${maths}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Biology}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Chem}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${phys}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Geo}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Econ}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${civic}"/></li>
+                                        </ul>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <p style="margin-left: 60px">Grade:</p>
+                                        <ul style="list-style-type: none; padding-left: 10px">
+                                    <li><input type="text" class="mt-1 text-center" value="${first}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${second}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Third}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Forth}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Fifth}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Sixth}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${Seventh}"/></li>
+                                    <li><input type="text" class="mt-1 text-center" value="${eighth}"/></li>
+                                        </ul>
+                                      </div>
+                      
+                    `);
+                  }
+
+                  // Call the function on page load to show any existing stored data
+                </script>
+              </div>
+            </div>
+            <div class="card-footer text-center">
+              <p>Date of Issue: 20-Jul-2023</p>
+              <p>Registrar</p>
+              <a href="grade.html" class="btn btn-primary">Add Subjects</a>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
